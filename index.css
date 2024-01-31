@@ -85,7 +85,7 @@ body {
 }
 #about {
     width:14vw;
-    height:10vw;
+    height:5vw;
     text-align:center;
     font-size:25px;
     background:transparent;
@@ -102,7 +102,7 @@ body {
 }
 #work {
     width:14vw;
-    height:10vw;
+    height:5vw;
     text-align:center;
     font-size:25px;
     background:transparent;
@@ -119,7 +119,7 @@ body {
 }
 #contact {
     width:14vw;
-    height:10vw;
+    height:5vw;
     text-align:center;
     font-size:25px;
     background:transparent;
@@ -361,25 +361,97 @@ body {
     }
 }
 
-/* Add this CSS to make the images span the entire screen */
-#work_images {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
+
+/* Modify the existing styles at the end of your CSS file */
+.work_button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
-#work_images a {
-    display: block;
+.work_button img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay p {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.work_button:hover img {
+    transform: scale(1.1);
+}
+
+.work_button:hover .overlay {
+    opacity: 1;
+}
+
+
+/* Updated styles for the sidebar */
+#sidebar {
+    width: 20%;
+    background: #fff; /* Choose a suitable background color */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0; /* Updated to cover the entire height of the page */
+    right: 0; /* Adjusted to be on the right */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling if the content is too long */
+}
+
+#sidebar img {
+    width: 100%;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
-#work_images img {
-    width: 100%;
-    height: auto;
-    border: 2px solid #fff; /* Optional: Add border to images */
-    border-radius: 8px; /* Optional: Add border-radius to images */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Choose a suitable text color */
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: rgb(255, 50, 50); /* Highlight color */
+}
+
+/* Updated styles for the content */
+#content {
+    margin-right: 25%; /* Adjust based on your sidebar width */
+    padding: 20px;
+}
+
+#content h2 {
+    color: rgb(255, 50, 50);
 }
