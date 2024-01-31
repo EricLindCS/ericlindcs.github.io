@@ -447,11 +447,11 @@ nav a:hover {
 }
 
 /* Updated styles for the content */
-#content {
+#about_content {
     margin-right: 25%; /* Adjust based on your sidebar width */
     padding: 20px;
 }
 
-#content h2 {
-    color: rgb(255, 50, 50);
+#about_content h2 {
+    color: rgb(255, 255, 255);
 }
