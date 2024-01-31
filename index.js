@@ -51,3 +51,23 @@ setTimeout(function(){
       $("#work").removeClass("animated fadeIn");
     },1000);
 },1500);
+
+
+
+$(document).ready(function () {
+    // Function to close side windows
+    function closeSideWindows() {
+        // Add your logic to close side windows here
+        closecontact();
+        closeabout();
+        closework();
+        // Add more if needed
+    }
+
+    // Event listener for keydown
+    $(document).on('keydown', function (e) {
+        if (e.keyCode === 27) { // 27 is the keycode for the "Esc" key
+            closeSideWindows();
+        }
+    });
+});
