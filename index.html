@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="icons/style.css"></head>
 </head>
 <body>
+
     <div id="loading">
         <div id="spinner"></div>
     </div>
+
     <div id="particles-js"></div>
+
     <div id="box">
         <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
         <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
@@ -25,9 +28,11 @@
         <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
         <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
     </div>
+
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">Resume</a>
     <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">Projects</a>
     <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">Contact</a>
+    
     <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
         <h1>Eric Lind</h1>
         <h4>"Apathy's a Tragedy and Boredom is a Crime"</h4>
@@ -41,155 +46,153 @@
                 <tr>
                     <td class="animated zoomIn" style="animation-delay:2s;"><a href="https://github.com/EricLindCS" target="_blank" class="social"><i class="fab fa-github"></i></a></td>
                     <td class="animated zoomIn" style="animation-delay:2s;"><a class="social"><i class="fab fa-reddit-square"></i></a></td>
-                    <td class="animated zoomIn" style="animation-delay:2s;"><a class="social"><i class="fab fa-instagram"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2s;"><a href="https://team2584.com" target="_blank" class="social"><i class="fas fa-robot"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2s;"><a href="https://discordapp.com/users/asphada" target="_blank" class="social"><i class="fab fa-discord"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2s;"><a href="links.html" class="social"><i class="fas fa-link"></i>></i></a></td>
                 </tr>
         </table>
     </div>
+
+
     <div id="work_container" class="container">
         <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
         <h1>Projects</h1>
         <!-- Inside #work_container -->
-<<section id="work_buttons">
-    <div class="work_button">
-        <img src="frc.png" alt="Project 1">
-        <div class="overlay">
-            <p>Project 1</p>
-        </div>
+        <section id="work_buttons">
+            <div class="work_button">
+                <img src="frc.png" alt="Project 1">
+                <div class="overlay">
+                    <p>Project 1</p>
+                </div>
+            </div>
+            <div class="work_button">
+                <img src="path/to/image2.jpg" alt="Project 2">
+                <div class="overlay">
+                    <p>Project 2</p>
+                </div>
+            </div>
+        <!-- Add more work_button divs for each project -->
+        </section>
     </div>
-    <div class="work_button">
-        <img src="path/to/image2.jpg" alt="Project 2">
-        <div class="overlay">
-            <p>Project 2</p>
-        </div>
-    </div>
-    <!-- Add more work_button divs for each project -->
-</section>
-
-</div>
-
-
-
 
 
     <div id="about_container" class="container">
-            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-            <h1>About Me // Resume</h1>
-            
+        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+        <h1>About Me // Resume</h1>
 
-<div id="sidebar">
-    <img src="your_profile_picture_url.jpg" alt="Your Profile Picture">
-    <nav>
-        <ul>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#volunteering">Volunteering</a></li>
-        </ul>
-    </nav>
-</div>
-
-
-    <div id="about_content">
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>
-                Current high-school student with lofty aspirations. Experienced
-                in microcontroller-based physical computing, computerized
-                numerical control machining, and competitive robotics. An
-                extremely driven, strong leader who has a love of learning,
-                challenging himself, and inspiring a love of engineering in others.
-            </p>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <h3>Reseda Science Magnet - Rising Senior</h3>
-            <p>Reseda High School, Reseda, CA</p>
-            <p>GPA: 4.62 (W)</p>
-            <p>10 AP-level Classes taken to date, including AP Physics & AP Calculus</p>
-            <p>Recognized on the Honor Roll for six semesters straight</p>
-            <p>Co-Founder of the Computer Science Club, current elected president of the Robotics Club</p>
-
-            <h3>Los Angeles Pierce College</h3>
-            <p>Pierce College, Woodland Hills, CA</p>
-            <p>GPA: 4.0</p>
-            <p>College-level classes in Computer Science, General Engineering, Engineering Design, Biotechnology, and Computer Information Systems</p>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <h3>ASPIRE Research Internship Program</h3>
-            <p>Participated in the ASPIRE Biotechnological research internship program at LA Pierce College.</p>
-            <p>Performed a research project centered around utilizing revolutionary technology for biomass monitoring in the processes of bacterial protein expression</p>
-            <p>Worked on individual research project in addition to group collaborations</p>
-            <p>Built a web-based program using mySQL and NodeJS to speed up the process of data-analysis for said project</p>
-
-            <h3>Robotics Team Captain - VEX 20 & FRC 2584</h3>
-            <p>High School Competitive Robotics Team Captain with a focus on design, programming, and teaching.</p>
-            <!-- ... More experience details ... -->
-
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <p>Certified SolidWorks Associate</p>
-        </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill-category">
-            <h3>Programming</h3>
-            <p><i class="fab fa-java"></i> Java</p>
-            <p><i class="fab fa-cuttlefish"></i> C++</p>
-            <p><i class="fab fa-python"></i> Python</p>
-            <p><i class="fab fa-html5"></i> HTML/CSS/JS</p>
-            <p><i class="fab fa-node"></i> NodeJS</p>
-            <p><i class="fas fa-database"></i> SQL</p>
+        <div id="sidebar">
+            <img src="placeholder.jpg" alt="Your Profile Picture">
+            <nav>
+                <ul>
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#volunteering">Volunteering</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="skill-category">
-            <h3>Computer Aided Design</h3>
-            <p><i class="fas fa-cube"></i> Solidworks</p>
-            <p><i class="fas fa-cube"></i> Fusion 360</p>
-            <p><i class="fas fa-cube"></i> Autodesk Inventor</p>
-            <p><i class="fas fa-cube"></i> GrabCAD</p>
-        </div>
-        <div class="skill-category">
-            <h3>Manufacturing</h3>
-            <p><i class="fas fa-cogs"></i> Tormach CNC</p>
-            <p><i class="fas fa-cogs"></i> CNC Router</p>
-            <p><i class="fas fa-cogs"></i> WaterJet</p>
-            <p><i class="fas fa-cogs"></i> Laser Cutter</p>
-            <p><i class="fas fa-cogs"></i> Manual Mill</p>
-            <p><i class="fas fa-cogs"></i> 3D-Printing</p>
-        </div>
-    </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <p>FIRST Dean's List Award SemiFinalist (2023)</p>
-        <p>Recognized for academic excellence and outstanding contributions to the FIRST Robotics community</p>
-        <p>LA Science Fair - 2nd Place - Junior High Division (2020)</p>
-        <p>Designed & built an affordable Arduino-based desktop VR Headset</p>
-    </section>
+        <div id="about_content">
+            <section id="summary">
+                <h2>Summary</h2>
+                <p>
+                    Current high-school student with lofty aspirations. Experienced
+                    in microcontroller-based physical computing, computerized
+                    numerical control machining, and competitive robotics. An
+                    extremely driven, strong leader who has a love of learning,
+                    challenging himself, and inspiring a love of engineering in others.
+                </p>
+            </section>
 
-    <!-- Volunteering Section -->
-    <section id="volunteering">
-        <h2>Volunteering & Robotics Outreach</h2>
-        <p>Junior High Robotics Mentoring - Portola, Muholland, and Reseda MS</p>
-        <p>Mentored teams of 6-8th Grade students of widely varying levels of experience in the VEX IQ Robotics Competition.</p>
-        <p>Formed a new team from the ground up at Reseda MS</p>
-        <p>100+ Hours</p>
-    </section>
-</div>
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education</h2>
+                <h3>Reseda Science Magnet - Rising Senior</h3>
+                <p>Reseda High School, Reseda, CA</p>
+                <p>GPA: 4.62 (W)</p>
+                <p>10 AP-level Classes taken to date, including AP Physics & AP Calculus</p>
+                <p>Recognized on the Honor Roll for six semesters straight</p>
+                <p>Co-Founder of the Computer Science Club, current elected president of the Robotics Club</p>
+
+                <h3>Los Angeles Pierce College</h3>
+                <p>Pierce College, Woodland Hills, CA</p>
+                <p>GPA: 4.0</p>
+                <p>College-level classes in Computer Science, General Engineering, Engineering Design, Biotechnology, and Computer Information Systems</p>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2>Experience</h2>
+
+                <h3>ASPIRE Research Internship Program</h3>
+                <p>Participated in the ASPIRE Biotechnological research internship program at LA Pierce College.</p>
+                <p>Performed a research project centered around utilizing revolutionary technology for biomass monitoring in the processes of bacterial protein expression</p>
+                <p>Worked on individual research project in addition to group collaborations</p>
+                <p>Built a web-based program using mySQL and NodeJS to speed up the process of data-analysis for said project</p>
+
+                <h3>Robotics Team Captain - VEX 20 & FRC 2584</h3>
+                <p>High School Competitive Robotics Team Captain with a focus on design, programming, and teaching.</p>
+                <!-- ... More experience details ... -->
+
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <p>Certified SolidWorks Associate</p>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <p><i class="fab fa-java"></i> Java</p>
+                    <p><i class="fab fa-cuttlefish"></i> C++</p>
+                    <p><i class="fab fa-python"></i> Python</p>
+                    <p><i class="fab fa-html5"></i> HTML/CSS/JS</p>
+                    <p><i class="fab fa-node"></i> NodeJS</p>
+                    <p><i class="fas fa-database"></i> SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Computer Aided Design</h3>
+                    <p><i class="fas fa-cube"></i> Solidworks</p>
+                    <p><i class="fas fa-cube"></i> Fusion 360</p>
+                    <p><i class="fas fa-cube"></i> Autodesk Inventor</p>
+                    <p><i class="fas fa-cube"></i> GrabCAD</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Manufacturing</h3>
+                    <p><i class="fas fa-cogs"></i> Tormach CNC</p>
+                    <p><i class="fas fa-cogs"></i> CNC Router</p>
+                    <p><i class="fas fa-cogs"></i> WaterJet</p>
+                    <p><i class="fas fa-cogs"></i> Laser Cutter</p>
+                    <p><i class="fas fa-cogs"></i> Manual Mill</p>
+                    <p><i class="fas fa-cogs"></i> 3D-Printing</p>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section id="achievements">
+                <h2>Achievements</h2>
+                <p>FIRST Dean's List Award SemiFinalist (2023)</p>
+                <p>Recognized for academic excellence and outstanding contributions to the FIRST Robotics community</p>
+                <p>LA Science Fair - 2nd Place - Junior High Division (2020)</p>
+                <p>Designed & built an affordable Arduino-based desktop VR Headset</p>
+            </section>
+
+            <!-- Volunteering Section -->
+            <section id="volunteering">
+                <h2>Volunteering & Robotics Outreach</h2>
+                <p>Junior High Robotics Mentoring - Portola, Muholland, and Reseda MS</p>
+                <p>Mentored teams of 6-8th Grade students of widely varying levels of experience in the VEX IQ Robotics Competition.</p>
+                <p>Formed a new team from the ground up at Reseda MS</p>
+                <p>100+ Hours</p>
+            </section>
+        </div>
 
 
         </div>
@@ -206,13 +209,17 @@
                         <button class="btn_one">Send</button>
                     </form> 
                 </p>
+                <p>Really need my email? Message me <a href="mailto:lamnoda3@gmail.com" target="_blank">here!</a></p> 
             </section>
         </div>
+
         <div id="footer">
             made on earth by a human <br> <a href="https://github.com/EricLindCS/website">Github Repository</a> <br> <a href="https://www.reddit.com/user/wfdownloader/">Image Source</a>
         </div>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
-</body>
+
+        <script src="index.js" type="text/javascript"></script>
+        <script src="particles.js"></script>
+        <script src="app.js"></script>
+
+    </body>
 </html>
