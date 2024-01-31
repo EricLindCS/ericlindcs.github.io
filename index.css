@@ -360,3 +360,26 @@ body {
         width:100%;
     }
 }
+
+/* Add this CSS to make the images span the entire screen */
+#work_images {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+#work_images a {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#work_images img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff; /* Optional: Add border to images */
+    border-radius: 8px; /* Optional: Add border-radius to images */
+}
