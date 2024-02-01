@@ -2,7 +2,7 @@ $(document).ready(function() {
     function loadContentFromJSON() {
         $.ajax({
             type: "GET",
-            url: "links.json",
+            url: "https://raw.githubusercontent.com/EricLindCS/website/main/linkspage/links.json",
             dataType: "json",
             success: function(data) {
                 processData(data);
