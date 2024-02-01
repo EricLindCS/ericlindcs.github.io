@@ -3,7 +3,7 @@
 body {
     padding:0px;
     margin:0px;
-    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1491956175078-460aea0914ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1550&q=80") center center;
+    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/placeholder3.png") center center;
     background-size:cover;
     width:100vw;
     height:100vh;
@@ -361,72 +361,66 @@ body {
     }
 }
 
+.button-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    
+  }
 
-/* Update the styles for the work_button */
-/* Updated styles for the work_button */
-.work_button {
+  .image-button {
     position: relative;
     overflow: hidden;
+    margin: 25px;
+    width: 100%;
     border-radius: 15px;
-    margin-bottom: 15px;
-    border: 2px solid rgb(255, 50, 50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    height: 250px; /* Set a fixed height for the button */
+  }
 
-}
-
-.work_button img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 15px;
-
-    transform: scale(0.95);
-    transition: transform 0.3s ease-out;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .image-button img {
     width: 100%;
     height: 100%;
-    opacity: 0.8; /* Set initial opacity to make the text partially visible */
-    transition: opacity 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
     border-radius: 15px;
-    box-sizing: border-box;
+  }
 
-    transform: scale(0.95);
-    transition: transform 0.3s ease-out;
-}
-
-.overlay p {
-    margin: 0;
-    color: #fff;
-    font-size: 20px;
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
     font-weight: bold;
-    transition: font-size 0.3s ease-out;
-}
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+    transition: font-size 0.3s ease-in-out;
+  }
 
-.work_button:hover img {
-    transform: scale(0.9); /* Adjust the scale factor as needed */
-}
+  .image-button:hover img {
+    transform: scale(0.95);
+  }
 
-.work_button:hover .overlay {
-    transform: scale(1);
-    opacity: 1; /* Set opacity to 1 when hovering */
-}
+  .image-button:hover .overlay-text {
+    font-size: 35px;
+  }
 
-.work_button:hover .overlay p {
-    font-size: 30px;
-}
+  /* You can customize button colors and styles */
+  .button1 {
+    background-color: #000000;
+  }
+
+  .button2 {
+    background-color: #000000;
+  }
+
+  .button3 {
+    background-color: #000000;
+  }
 
 
 
@@ -447,7 +441,7 @@ body {
 
 #sidebar img {
     width: 100%;
-    border-radius: 50%;
+    border-radius: 20%;
     margin-bottom: 20px;
 }
 
