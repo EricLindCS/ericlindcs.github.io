@@ -11,12 +11,15 @@ body {
     flex: 1;
 }
 
+
+
 .sidebar {
     background-color: #333;
     color: #fff;
     padding: 20px;
     width: 20vw;
-    height: 100vh;
+    max-height: 100vh; /* Set a maximum height for the sidebar */
+    overflow-y: auto; /* Add vertical scrollbar when content overflows */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     position: fixed;
@@ -84,12 +87,6 @@ h2 {
 
 .contri {
     color:#fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 0px;
 }
 
 .contri h2{
