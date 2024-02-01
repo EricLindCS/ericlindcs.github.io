@@ -9,6 +9,7 @@ $(document).ready(function() {
             },
             error: function(xhr, status, error) {
                 console.error("Failed to load CSV file:", status, error);
+                window.location.replace("404.html");
             }
         });
     }
