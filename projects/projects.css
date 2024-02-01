@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.back-button {
+    position: relative;
+    justify-content:center;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s; /* Added transition for transform property */
+}
+
+.back-button:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+.back-icon {
+    margin-right: 10px;
+    font-size: 1.5em; /* Adjusted font size */
+}
+
+/* Removed animation for text */
+.animated-text span {
+    opacity: 1;
+}
+
+/* Keep text visible at all times */
+.animated-text {
+    display: inline-block;
+    overflow: hidden;
+}

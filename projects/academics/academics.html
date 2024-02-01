@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Your HTML Page</title>
+    <style>
+
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            margin-left: 20vw;
+            text-align: center;
+            padding: 15px;
+        }
+
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh; /* Set the height to 100% of the viewport height */
+            width: 20vw;
+            background-color: #333;
+            padding-top: 20px;
+            overflow-y: auto;
+        }
+
+        #sidebar a {
+            position: relative;
+            color: #fff;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            opacity: 0.8;
+            transition: opacity 0.3s, transform 0.3s; /* Added transition for transform property */
+        }
+
+        #sidebar a:hover {
+            background-color: #555;
+        }
+
+
+        #main-content {
+            margin-left: 20vw;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            padding: 2em;
+            margin: 2em;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        
+        <h1>Student Project Documentation</h1>
+    </header>
+
+    <div id="sidebar">
+        <div id="scrollbar"></div>
+        <div class="back-button" onclick="goBack()" onmouseover="hoverButton()" onmouseout="unhoverButton()" style="color: #fff;">
+            <span class="back-icon"><i class="fas fa-arrow-left"></i></span>
+            <span class="animated-text"><span>Back to Main Page</span></span>
+        </div>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+        <a href="#section5">Section 5</a>
+    </div>
+
+    <div id="main-content">
+
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <p>This is a placeholder text for the project overview. Describe your project briefly here.</p>
+        </section>
+    
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </section>
+    
+        <section id="code">
+            <h2>Code</h2>
+            <pre>
+    <code>
+    // Placeholder code goes here
+    function myFunction() {
+        // Your code here
+    }
+    </code>
+    </pre>
+        </section>
+    
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you have any questions or feedback, feel free to contact me at <a href="mailto:example@email.com">example@email.com</a></p>
+        </section>
+    </div>
+
+    <script src="../projects.js"></script>
+
+</body>
+</html>
