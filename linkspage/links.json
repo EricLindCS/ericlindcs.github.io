@@ -1,0 +1,21 @@
+[
+    {
+      "id": "section1",
+      "title": "Section 1",
+      "description": "This is the description for Section 1. Add your content here.",
+      "links": ["Link 1", "Link 2", "Link 3"]
+    },
+    {
+      "id": "section2",
+      "title": "Section 2",
+      "description": "This is the description for Section 2. Add your content here.",
+      "links": ["Link 1", "Link 2", "Link 3"]
+    },
+    {
+      "id": "section3",
+      "title": "Section 3",
+      "description": "This is the description for Section 3. Add your content here.",
+      "links": ["Link 1", "Link 2", "Link 3"]
+    }
+  ]
+  
