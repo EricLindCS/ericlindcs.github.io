@@ -1,6 +1,3 @@
-// Sample text document content
-  
-    
   // Function to parse text document and generate HTML content
   function parseTextDocument(text) {
 
@@ -14,7 +11,6 @@
     const lines = text.trim().split('\n');
     let html = '';
 
-    
     document.title = lines[0];
     document.getElementById('headerText').innerText = lines[0];
 
@@ -35,7 +31,19 @@
                 html += `<h2>${currentSection}</h2>`;
               } 
               else if (lines[i].startsWith('&')) {
-                html += `<p>${lines[i].substring(1).trim()}</p>`;
+                var h = 0;
+                for(var p = 1; p < lines[i].length; p++){
+                  if(lines[i].substring(p,p+1) === "&"){
+                    h+=1;
+                  }
+                }
+                if(lines[i].substring(1,2) === "&"){
+                  var temp = lines[i].substring(h+1);
+                  html += `<h${h}>${temp}</h${h}>`;
+                }
+                else {
+                  html += `<p>${lines[i].substring(1).trim()}</p>`;
+                }
               } 
               else if (lines[i].startsWith('^')) {
                 html += `<ul><li>${lines[i].substring(1).trim()}</li></ul>`;
@@ -65,3 +73,20 @@
 
     // Parse and generate HTML from the text document
   parseTextDocument(textDocument);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var myElement = document.getElementById("loading");
+
+    setTimeout(function () {
+        myElement.remove();
+        // Optional: Add a class to apply additional styles if needed
+        // myElement.classList.add("hidden");
+    }, 1000);
+
+    setTimeout(function () {
+      myElement.style.opacity = 0;
+      // Optional: Add a class to apply additional styles if needed
+      // myElement.classList.add("hidden");
+    }, 700);
+
+});
