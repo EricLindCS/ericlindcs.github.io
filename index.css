@@ -448,6 +448,7 @@ nav a:hover {
 
 /* Updated styles for the content */
 #about_content {
+    margin-top:0px;
     margin-right: 25%; /* Adjust based on your sidebar width */
     padding: 20px;
 }
