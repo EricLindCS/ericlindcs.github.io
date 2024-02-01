@@ -20,9 +20,9 @@ $(document).ready(function() {
         var lines = csv.split("\n");
         var headers = lines[0].split(",");
 
-        for (var i = 1; i < lines.length; i++) {
+        for (var i = 1; i < lines.length-1; i++) {
             var data = lines[i].split(",");
-            if (data.length === headers.length) {
+          
                 // Populate navigation links
                 var navLink = '<li><a href="#' + data[0] + '">' + data[1] + '</a></li>';
                 navContainer.append(navLink);
@@ -32,7 +32,7 @@ $(document).ready(function() {
                 sectionHtml += '<h2>' + data[1] + '</h2>';
                 sectionHtml += '<p>' + data[2] + '</p>';
                 sectionHtml += '<ul>';
-                for (var j = 3; j < headers.length; j += 2) {
+                for (var j = 3; j < data.length; j += 2) {
                     var linkUrl = data[j];
                     var linkText = data[j + 1];
                     if (linkUrl && linkText) {
@@ -43,9 +43,7 @@ $(document).ready(function() {
                 sectionHtml += '</section>';
 
                 contentContainer.append(sectionHtml);
-            } else {
-                console.error("Invalid data format in CSV file:", data);
-            }
+          
         }
     }
 
