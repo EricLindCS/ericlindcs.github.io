@@ -1,56 +1,68 @@
 $(document).ready(function() {
-    function loadContentFromJSON() {
+    function loadContentFromCSV() {
         $.ajax({
             type: "GET",
-            url: "https://raw.githubusercontent.com/EricLindCS/website/main/linkspage/links.json",
-            dataType: "json",
+            url: "https://raw.githubusercontent.com/EricLindCS/website/main/linkspage/links.csv",
+            dataType: "text",
             success: function(data) {
                 processData(data);
             },
             error: function(xhr, status, error) {
-                console.error("Failed to load JSON file:", status, error);
+                console.error("Failed to load CSV file:", status, error);
             }
         });
     }
 
-    function processData(data) {
+    function processData(csv) {
         var navContainer = $("#nav-links");
         var contentContainer = $("#main-content");
 
-        data.forEach(function(section) {
-            // Populate navigation links
-            var navLink = '<li><a href="#' + section.id + '">' + section.title + '</a></li>';
-            navContainer.append(navLink);
+        var lines = csv.split("\n");
+        var headers = lines[0].split(",");
 
-            // Populate main content
-            var sectionHtml = '<section id="' + section.id + '">';
-            sectionHtml += '<h2>' + section.title + '</h2>';
-            sectionHtml += '<p>' + section.description + '</p>';
-            sectionHtml += '<ul>';
-            section.links.forEach(function(link) {
-                sectionHtml += '<li><a href="#">' + link + '</a></li>';
-            });
-            sectionHtml += '</ul>';
-            sectionHtml += '</section>';
+        for (var i = 1; i < lines.length; i++) {
+            var data = lines[i].split(",");
+            if (data.length === headers.length) {
+                // Populate navigation links
+                var navLink = '<li><a href="#' + data[0] + '">' + data[1] + '</a></li>';
+                navContainer.append(navLink);
 
-            contentContainer.append(sectionHtml);
-        });
+                // Populate main content
+                var sectionHtml = '<section id="' + data[0] + '">';
+                sectionHtml += '<h2>' + data[1] + '</h2>';
+                sectionHtml += '<p>' + data[2] + '</p>';
+                sectionHtml += '<ul>';
+                for (var j = 3; j < headers.length; j += 2) {
+                    var linkUrl = data[j];
+                    var linkText = data[j + 1];
+                    if (linkUrl && linkText) {
+                        sectionHtml += '<li><a href="' + linkUrl + '">' + linkText + '</a></li>';
+                    }
+                }
+                sectionHtml += '</ul>';
+                sectionHtml += '</section>';
+
+                contentContainer.append(sectionHtml);
+            } else {
+                console.error("Invalid data format in CSV file:", data);
+            }
+        }
     }
 
     function displayFileContents() {
         $.ajax({
             type: "GET",
-            url: "links.json",
-            dataType: "json",
-            success: function(jsonData) {
-                console.log("Contents of links.json:", jsonData);
+            url: "links.csv",
+            dataType: "text",
+            success: function(csvData) {
+                console.log("Contents of links.csv:", csvData);
             },
             error: function(xhr, status, error) {
-                console.error("Failed to load JSON file:", status, error);
+                console.error("Failed to load CSV file:", status, error);
             }
         });
     }
 
-    loadContentFromJSON();
+    loadContentFromCSV();
     displayFileContents();
 });
