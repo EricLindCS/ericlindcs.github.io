@@ -9,8 +9,8 @@ body {
 .container {
     display: flex;
     flex: 1;
+    left: 20vw;
 }
-
 
 
 .sidebar {
@@ -70,7 +70,7 @@ body {
 main {
     flex: 1;
     padding: 20px;
-    margin-left: 250px; /* Adjusted to accommodate the sidebar width */
+    margin-left: 20vw; /* Adjusted to accommodate the sidebar width */
 }
 
 section {
