@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Under Construction</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a1a1a;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .construction-container {
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+        }
+
+        .crane {
+            position: absolute;
+            width: 100px;
+        }
+
+        .banner {
+            position: relative;
+            background: #f39c12;
+            padding: 20px 40px;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .banner p {
+            margin: 10px 0;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+
+        .home-button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="construction-container">
+            <div class="crane" id="crane">
+                <img height=100 width=100 src="https://media.istockphoto.com/id/1450530684/vector/construction-equipment-excavator-crane-for-transporting-goods-and-building-construction-flat.jpg?s=612x612&w=0&k=20&c=TYq-MM1X451a5WZqzjBsPLI8ZI7Pa142HWabeqoog4o=" alt="Crane">
+            </div>
+            <div class="banner">
+                <h1>404 - Page Not Found</h1>
+                <p>This page is under construction. Please check back later!</p>
+                <a href="/" class="home-button">Go Back Home</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const crane = document.getElementById("crane");
+            const container = document.querySelector(".container");
+
+            let posX = Math.random() * (container.offsetWidth - crane.offsetWidth);
+            let posY = Math.random() * (container.offsetHeight - crane.offsetHeight);
+            let speedX = 2 + Math.random() * 3; // Random speed between 2 and 5 pixels per frame
+            let speedY = 2 + Math.random() * 3;
+
+            function moveCrane() {
+                posX += speedX;
+                posY += speedY;
+
+                // Check for collision with edges and reverse direction
+                if (posX <= 0 || posX >= container.offsetWidth - crane.offsetWidth) {
+                    speedX = -speedX;
+                }
+                if (posY <= 0 || posY >= container.offsetHeight - crane.offsetHeight) {
+                    speedY = -speedY;
+                }
+
+                crane.style.transform = `translate(${posX}px, ${posY}px)`;
+                requestAnimationFrame(moveCrane);
+            }
+
+            moveCrane();
+        });
+    </script>
+</body>
+</html>
