@@ -2,7 +2,7 @@ $(document).ready(function() {
     function loadContentFromCSV() {
         $.ajax({
             type: "GET",
-            url: "https://raw.githubusercontent.com/EricLindCS/website/main/linkspage/links.csv",
+            url: "https://raw.githubusercontent.com/EricLindCS/ericlindcs.github.io/main/linkspage/links.csv",
             dataType: "text",
             success: function(data) {
                 processData(data);
