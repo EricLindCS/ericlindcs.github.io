@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="links.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Some Helpful Links</title>
 </head>
 <body>
 
+    <div id="loading" class="disappearing-element">
+        <div id="spinner"></div>
+    </div>
+
     <div class="container">
-        <nav class="sidebar">
+        
+        <div class="sidebar" id="sidebar">
+
+            <div class="back-button" onclick="location.href = '../index.html';" onmouseover="hoverButton()" onmouseout="unhoverButton()" style="color: #fff;">
+                <span class="back-icon"><i class="fas fa-arrow-left"></i></span>
+                <span class="animated-text"><span>Back to Main Page</span></span>
+            </div>
+
             <div class="logo">
                 <h1>Some Helpful Links</h1>
             </div>
-            <h6>This page Auto-Populates from a <a href="https://raw.githubusercontent.com/EricLindCS/website/main/linkspage/links.csv" target="_blank">CSV file</a>.</h6>
+            <h6>This page Auto-Populates from a <a href="../links.csv" target="_blank">CSV file</a>.</h6>
             <ul id="nav-links" class="nav-links">
                 <!-- Navigation links will be dynamically loaded here -->
             </ul>
@@ -24,16 +38,15 @@
                     <h4 style="padding-bottom: 0px; margin-bottom: 0px;">Contributors:</h4>
                     <h5 style="padding-top: 0px; margin-top: 10px;">
                         Eric L. <br>
-                        Siona G. <br>
-                        Tyler V. <br>
                     </h5>
 
                 </p>
             </div>
 
 
-        </nav>
+        </div>
 
+        <div class="toggle-button" id="toggleButton">☰ Menu</div>
 
         <main id="main-content">
             <!-- Content will be dynamically loaded here -->
