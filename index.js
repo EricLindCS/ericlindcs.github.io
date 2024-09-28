@@ -3,28 +3,31 @@ function showabout(){
     $("#about_container").addClass("animated slideInLeft");
     setTimeout(function(){
         $("#about_container").removeClass("animated slideInLeft");
-    },800);
+    },1000);
 }
+
 function closeabout(){
     $("#about_container").addClass("animated slideOutLeft");
     setTimeout(function(){
         $("#about_container").removeClass("animated slideOutLeft");
         $("#about_container").css("display","none");
-    },800);
+    },1000);
 }
+
 function showwork(){
     $("#work_container").css("display","inherit");
     $("#work_container").addClass("animated slideInRight");
     setTimeout(function(){
         $("#work_container").removeClass("animated slideInRight");
-    },800);
+    },1000);
 }
+
 function closework(){
     $("#work_container").addClass("animated slideOutRight");
     setTimeout(function(){
         $("#work_container").removeClass("animated slideOutRight");
         $("#work_container").css("display","none");
-    },800);
+    },1000);
 }
 
 setTimeout(function(){
