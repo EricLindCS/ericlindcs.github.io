@@ -5,7 +5,6 @@ function showabout(){
         $("#about_container").removeClass("animated slideInLeft");
     },1000);
 }
-
 function closeabout(){
     $("#about_container").addClass("animated slideOutLeft");
     setTimeout(function(){
