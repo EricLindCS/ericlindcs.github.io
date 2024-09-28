@@ -1,8 +1,23 @@
 $(document).ready(function() {
+
+    var myElement = document.getElementById("loading");
+  
+      setTimeout(function () {
+          myElement.remove();
+          // Optional: Add a class to apply additional styles if needed
+          // myElement.classList.add("hidden");
+      }, 1000);
+  
+      setTimeout(function () {
+        myElement.style.opacity = 0;
+        // Optional: Add a class to apply additional styles if needed
+        // myElement.classList.add("hidden");
+      }, 700);
+
     function loadContentFromCSV() {
         $.ajax({
             type: "GET",
-            url: "https://raw.githubusercontent.com/EricLindCS/ericlindcs.github.io/main/linkspage/links.csv",
+            url: "https://raw.githubusercontent.com/EricLindCS/ericlindcs.github.io/refs/heads/main/linkspage/links.csv",
             dataType: "text",
             success: function(data) {
                 processData(data);
@@ -62,6 +77,29 @@ $(document).ready(function() {
         });
     }
 
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.getElementById('toggleButton');
+
+    toggleButton.addEventListener('click', function() {
+        sidebar.classList.toggle('collapsed');
+    });
+
+    // Existing code
+    function displayFileContents() {
+        $.ajax({
+            type: "GET",
+            url: "links.csv",
+            dataType: "text",
+            success: function(csvData) {
+                console.log("Contents of links.csv:", csvData);
+            },
+            error: function(xhr, status, error) {
+                console.error("Failed to load CSV file:", status, error);
+            }
+        });
+    }
+
     loadContentFromCSV();
     displayFileContents();
 });
+
