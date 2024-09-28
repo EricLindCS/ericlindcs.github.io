@@ -14,10 +14,10 @@ $(document).ready(function() {
         // myElement.classList.add("hidden");
       }, 700);
 
-      function loadContentFromCSV() {
+    function loadContentFromCSV() {
         $.ajax({
             type: "GET",
-            url: "../links.csv", // Updated to local file path
+            url: "https://raw.githubusercontent.com/EricLindCS/ericlindcs.github.io/refs/heads/main/linkspage/links.csv",
             dataType: "text",
             success: function(data) {
                 processData(data);
@@ -27,7 +27,7 @@ $(document).ready(function() {
                 window.location.replace("404.html");
             }
         });
-    }    
+    }
 
     function processData(csv) {
         var navContainer = $("#nav-links");
