@@ -29,6 +29,7 @@
             color: #fff;
             text-align: center;
             margin-top: 20px;
+            margin-bottom: 20px;
             animation: slideIn 3s ease-in-out;
         }
 
@@ -40,6 +41,28 @@
             font-size: 5rem;
             color: #fff;
             animation: bounce 2s infinite;
+        }
+
+        .lowerthird {
+           
+            animation: slideIn 3s ease-in-out;
+        }
+
+        .button{
+            margin-top: 50px;
+            margin-bottom: 50px; /* Added margin-bottom for larger spacing below the button */
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #ff4b47;
         }
 
         @keyframes fadeIn {
@@ -63,7 +86,12 @@
     <div class="container">
         <div class="construction-icon">🚧</div>
         <h1>~Under Construction~</h1>
-        <p>Turns out this website was slightly out of date. Coming back soon!</p>
+        <div class="lowerthird"> 
+            <p>Turns out this website was slightly out of date. Coming back soon!</p>
+            <a href="index.html" class="button">Go Back Home</a>
+        </div>
+        
+
     </div>
 </body>
 </html>
