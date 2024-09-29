@@ -52,9 +52,9 @@ $(document).ready(function() {
                 var linkTitle = data[j];
                 var linkUrl = data[j + 1];
                 var linkDescription = data[j + 2];
-                if (linkTitle && linkUrl && linkDescription) {
+                //if (linkTitle && linkUrl && linkDescription) {
                     sectionHtml += '<li><a href="' + linkUrl + '">' + linkTitle + '</a><p>' + linkDescription + '</p></li>';
-                }
+                //}
             }
             sectionHtml += '</ul>';
             sectionHtml += '</section>';
