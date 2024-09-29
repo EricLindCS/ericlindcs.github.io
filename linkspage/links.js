@@ -63,20 +63,6 @@ $(document).ready(function() {
         }
     }
 
-    function displayFileContents() {
-        $.ajax({
-            type: "GET",
-            url: "links.csv",
-            dataType: "text",
-            success: function(csvData) {
-                console.log("Contents of links.csv:", csvData);
-            },
-            error: function(xhr, status, error) {
-                console.error("Failed to load CSV file:", status, error);
-            }
-        });
-    }
-
     const sidebar = document.getElementById('sidebar');
     const toggleButton = document.getElementById('toggleButton');
 
@@ -84,22 +70,6 @@ $(document).ready(function() {
         sidebar.classList.toggle('collapsed');
     });
 
-    // Existing code
-    function displayFileContents() {
-        $.ajax({
-            type: "GET",
-            url: "links.csv",
-            dataType: "text",
-            success: function(csvData) {
-                console.log("Contents of links.csv:", csvData);
-            },
-            error: function(xhr, status, error) {
-                console.error("Failed to load CSV file:", status, error);
-            }
-        });
-    }
-
     loadContentFromCSV();
-    displayFileContents();
 });
 
