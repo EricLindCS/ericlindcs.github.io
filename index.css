@@ -81,7 +81,7 @@ body {
 #middle h1 {
     color:rgb(255, 0, 0);
     font-size:65px;
-    text-decoration:underline;
+    /*text-decoration:underline;*/
 }
 #about {
     width:14vw;
@@ -172,7 +172,7 @@ body {
     width:90vw;
     height:90vh;
     padding:5vh 5vw;
-    background:rgb(255, 50, 50);
+    background:rgb(94, 88, 88);
     color:#fff;
     z-index:9;
     position:fixed;
@@ -207,7 +207,7 @@ body {
 }
 .container h1 {
     font-size:60px;
-    text-decoration:underline;
+    /*text-decoration:underline;*/
 }
 .container p {
     font-size:21px;
@@ -361,66 +361,58 @@ body {
     }
 }
 
-.button-container {
-width: 80%;
-display: flex;
-flex-direction: column;
-align-items: center;
-border-radius: 15px;
-
-}
-
 .image-button {
-position: relative;
-overflow: hidden;
-margin-top: 20px;
-margin-bottom: 20px;
-width: 100%;
-border-radius: 15px;
-height: 250px; /* Set a fixed height for the button */
+    text-align: center;
+    justify-content:center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    height: 110px; /* Set a fixed height for the button */
 }
 
 .image-button img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.3s ease-in-out;
-border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
 }
 
 .overlay-text {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-font-size: 18px;
-font-weight: bold;
-text-align: center;
-pointer-events: none;
-z-index: 1;
-transition: font-size 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+    transition: font-size 0.3s ease-in-out;
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 10px 20px;
 }
 
 .image-button:hover img {
-transform: scale(0.95,0.85);
+    transform: scale(0.95,0.85);
 }
 
 .image-button:hover .overlay-text {
-font-size: 35px;
+    font-size: 35px;
 }
 
 /* You can customize button colors and styles */
 .button1 {
-background-color: #000000;
-}
-
-.button2 {
-background-color: #000000;
-}
-
-.button3 {
-background-color: #000000;
+    background-color: #000000;
 }
 
 
@@ -622,7 +614,3 @@ nav a:hover {
     background: linear-gradient(90deg, #0056b3, #003f7f);
     transform: translateY(-2px);
 }
-
-
-
-
