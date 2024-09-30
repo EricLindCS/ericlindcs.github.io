@@ -581,7 +581,7 @@ nav a:hover {
         padding-bottom: 98%;
     }
 }
-
+/*
 .resume-button {
     display: inline-block;
     padding: 12px 25px;
@@ -599,9 +599,9 @@ nav a:hover {
 .resume-button:hover {
     background: linear-gradient(90deg, #0056b3, #003f7f);
     transform: translateY(-2px);
-}
+}*/
 
-/*
+
 .resume-button {
     display: inline-block;
     padding: 10px 20px;
@@ -618,4 +618,3 @@ nav a:hover {
 .resume-button:hover {
     background-color: #0056b3;
 }
-*/
